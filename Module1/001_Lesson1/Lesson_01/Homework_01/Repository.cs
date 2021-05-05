@@ -133,6 +133,8 @@ namespace Homework_01
             Console.WriteLine($"Итого: {this.Workers.Count}\n");    // Сводный отчёт. Сколько работников распечатано
         }
 
+
+
         /// <summary>
         /// Метод, увольняющий работников с зарплатой больше заданной
         /// </summary>
@@ -142,6 +144,11 @@ namespace Homework_01
             this.Workers.RemoveAll(e => e.Salary > MaxSalary);//Удаление работников чья зарплата больше заданной MaxSalary
         }
 
+        /// <summary>
+        /// Метод, удаляющий ограниченное число работников, чья зп больше заданной, если работников больше лимита
+        /// </summary>
+        /// <param name="MaxSalary"></param>
+        /// <param name="Limit"></param>
         public void DeleteWorkerBySalaryLimitWorkers(int MaxSalary, int Limit)
         {
             for (int i = 0; i < this.Workers.Count; i++)
@@ -160,6 +167,12 @@ namespace Homework_01
         {   
             this.Workers.RemoveAll(e => e.FirstName == CurrentName);//Удаление работников чьё имя Удовлетворяет выбранному CurrentName
         }
+
+        /// <summary>
+        /// Метод, увольняющий работников с заданным именем, если работников больше лимимта
+        /// </summary>
+        /// <param name="CurrentName"></param>Имя работников, которых нужно уволить
+        /// <param name="Limit"></param>Лимитное число работников
         public void DeleteWorkerByNameLimitWorkers(string CurrentName, int Limit)
         {
             for (int i = 0; i < this.Workers.Count; i++)

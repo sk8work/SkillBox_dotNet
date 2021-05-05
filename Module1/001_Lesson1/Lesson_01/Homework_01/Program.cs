@@ -33,19 +33,20 @@ namespace Homework_01
             /**************************  Задание2  ******************************/
 
             Console.WriteLine("Задание 2. Создать отдел из 40 сотрудников и реализовать несколько увольнений, по " +
-                "результатам которых в отделе болжно остаться не более 30 работников");
+                "результатам которых в отделе должно остаться не более 30 работников");
 
             Console.WriteLine(new string('*', 30));
 
             Repository repository2 = new Repository(40);
             repository2.Print("База данных до преобразования");
-            repository2.DeleteWorkerByNameLimitWorkers("Агата", 30);
+            /*repository2.DeleteWorkerByNameLimitWorkers("Агата", 30);
             repository2.DeleteWorkerByNameLimitWorkers("Агнес", 30);
-            repository2.DeleteWorkerByNameLimitWorkers("Аделаида", 30);
-
-            repository2.DeleteWorkerBySalaryLimitWorkers(30000, 30);
+            repository2.DeleteWorkerByNameLimitWorkers("Аделаида", 30);*/
+            repository2.DeleteWorkerBySalary(30000);
+            //repository2.DeleteWorkerBySalaryLimitWorkers(30000, 30);
             repository2.Print("База данных после преобразования");
             Console.WriteLine(new string('*', 30));
+
             // Delay
             Console.ReadKey();
 
@@ -57,10 +58,13 @@ namespace Homework_01
             Console.WriteLine(new string('*', 30));
 
             Repository repository3 = new Repository(50);
+
             repository3.Print("База данных до преобразования");
-            repository3.DeleteWorkerBySalary(20000);
+            repository3.DeleteWorkerBySalary(30000);
             repository3.Print("База данных после преобразования");
+
             Console.WriteLine(new string('*', 30));
+
             // Delay
             Console.ReadKey();
 
