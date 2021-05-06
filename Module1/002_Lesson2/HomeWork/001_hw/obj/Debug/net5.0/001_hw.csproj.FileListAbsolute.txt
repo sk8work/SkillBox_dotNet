@@ -1,0 +1,16 @@
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\bin\Debug\net5.0\001_hw.exe
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\bin\Debug\net5.0\001_hw.deps.json
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\bin\Debug\net5.0\001_hw.runtimeconfig.json
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\bin\Debug\net5.0\001_hw.runtimeconfig.dev.json
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\bin\Debug\net5.0\001_hw.dll
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\bin\Debug\net5.0\ref\001_hw.dll
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\bin\Debug\net5.0\001_hw.pdb
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.csprojAssemblyReference.cache
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.GeneratedMSBuildEditorConfig.editorconfig
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.AssemblyInfoInputs.cache
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.AssemblyInfo.cs
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.csproj.CoreCompileInputs.cache
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.dll
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\ref\001_hw.dll
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.pdb
+D:\SkillBox_dotNet\Module1\002_Lesson2\HomeWork\001_hw\obj\Debug\net5.0\001_hw.genruntimeconfig.cache
