@@ -184,7 +184,13 @@ namespace _001_hw
             Console.WriteLine("Name: {0}, age: {1}, height: {2}", this.name, this.age, this.height);
             Console.WriteLine("Rus: {0}, History: {1}, Math: {2}", this.rusScore, this.historyScore, this.mathScore);
             Console.WriteLine("Your average score is {0}", string.Format("{0:0.##}", AverageScore()));
-            Console.WriteLine(new string('-', 30));
+            Console.WriteLine();
+
+            string endOfLine = new string('-', 100);
+            Console.SetCursorPosition((Console.WindowWidth - endOfLine.Length) / 2, Console.CursorTop);
+            Console.WriteLine(endOfLine);
+
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -196,7 +202,13 @@ namespace _001_hw
             Console.WriteLine($"Name: {this.name}, age: {this.age}, height: {this.height}");
             Console.WriteLine($"Rus: {this.rusScore}, History: {this.historyScore}, Math: {this.mathScore}");
             Console.WriteLine($"Your average score is {string.Format("{0:0.##}", AverageScore())}");
-            Console.WriteLine(new string('-', 30));
+            Console.WriteLine();
+
+            string endOfLine = new string('-', 100);
+            Console.SetCursorPosition((Console.WindowWidth - endOfLine.Length) / 2, Console.CursorTop);
+            Console.WriteLine(endOfLine);
+
+            Console.WriteLine();
         }
 
         /// <summary>
