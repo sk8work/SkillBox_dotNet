@@ -1,0 +1,16 @@
+D:\SkillBox_dotNet\Module1\003\HomeWork\bin\Debug\net5.0\HomeWork1.exe
+D:\SkillBox_dotNet\Module1\003\HomeWork\bin\Debug\net5.0\HomeWork1.deps.json
+D:\SkillBox_dotNet\Module1\003\HomeWork\bin\Debug\net5.0\HomeWork1.runtimeconfig.json
+D:\SkillBox_dotNet\Module1\003\HomeWork\bin\Debug\net5.0\HomeWork1.runtimeconfig.dev.json
+D:\SkillBox_dotNet\Module1\003\HomeWork\bin\Debug\net5.0\HomeWork1.dll
+D:\SkillBox_dotNet\Module1\003\HomeWork\bin\Debug\net5.0\ref\HomeWork1.dll
+D:\SkillBox_dotNet\Module1\003\HomeWork\bin\Debug\net5.0\HomeWork1.pdb
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.csprojAssemblyReference.cache
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.GeneratedMSBuildEditorConfig.editorconfig
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.AssemblyInfoInputs.cache
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.AssemblyInfo.cs
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.csproj.CoreCompileInputs.cache
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.dll
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\ref\HomeWork1.dll
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.pdb
+D:\SkillBox_dotNet\Module1\003\HomeWork\obj\Debug\net5.0\HomeWork1.genruntimeconfig.cache
