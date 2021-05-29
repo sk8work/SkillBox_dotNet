@@ -92,6 +92,8 @@ namespace HomeWork1
 
             #region Определим три месяца с наименьшей прибылью, при этом месяцы с одинаковой прибылью считаются за один
 
+            Console.WriteLine(new string('*', 50));
+
             // Копируем массив profit в дополнительный массив
             Array.Copy(profit, sortArr, profit.Length);
 
@@ -131,6 +133,7 @@ namespace HomeWork1
             Array.Sort(worstProfitIndexes);
 
             // Выводим информацию по месяцам с наихудшей прибылью в порядке возрастания месяцев
+            Console.WriteLine("Итого, худшая прибыль в следующие месяцы:");
             for (int i = 0; i < worstProfitIndexes.Length; i++)
             {
                 Console.Write($"{months[worstProfitIndexes[i]],-15}");
