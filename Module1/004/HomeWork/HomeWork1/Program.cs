@@ -143,7 +143,7 @@ namespace HomeWork1
             {
                 Console.Write($"{profit[worstProfitIndexes[i]],-15}");
             }
-
+            Console.WriteLine();
             #endregion
 
             // Delay
