@@ -34,23 +34,11 @@ namespace HomeWork1
 
             #endregion
 
-            #region Заполняем массив доходов случайыми числами и заполняем массив income
-            for (int i = 0; i < income.Length; i++)
+            #region заполнение массисов income, expenses, profit
+            for (int i = 0; i < months.Length; i++)
             {
                 income[i] = rand.Next(1, 20) * 10000;
-            }
-            #endregion
-
-            #region Заполняем массив расходов случайыми числами и заполняем массив expenses
-            for (int i = 0; i < expenses.Length; i++)
-            {
                 expenses[i] = rand.Next(1, 20) * 10000;
-            }
-            #endregion
-
-            #region Вычисляем прибыль за месяц и заполняем массив profit
-            for (int i = 0; i < profit.Length; i++)
-            {
                 profit[i] = income[i] - expenses[i];
             }
             #endregion
@@ -102,6 +90,7 @@ namespace HomeWork1
             int worst = sortArr[0];
             worstProfit[0] = sortArr[0];
 
+            // Заполним массив worstProfit худшими результатами прибыли за месяц
             for (int i = 1; i < worstProfit.Length; i++)
             {
                 for (int j = 1; j < sortArr.Length; j++)
@@ -116,34 +105,54 @@ namespace HomeWork1
                 }
             }
 
-            // Выясним, под какими индексами в массиве profit находятся месяцы с самой худшей прибылью
-            // И заполним массив worstProfitIndexes[3]
+            // Определим количество месяцев с худшей прибылью
+            int counter = 0;
             for (int i = 0; i < worstProfit.Length; i++)
             {
                 for (int j = 0; j < profit.Length; j++)
                 {
-                    if (profit[j] == worstProfit[i])
+                    if (worstProfit[i] == profit[j])
+                        counter++;
+                }
+            }
+            #endregion
+
+            #region Зададим массив allWorstMonths размерностью counter, заполним его нужными индексами и отсортируем для вывода по порядку
+            int[] allWorstMonths = new int[counter];
+
+            Console.WriteLine("WorstProfit");
+            for (int i = 0; i < worstProfit.Length; i++)
+            {
+                Console.WriteLine($"worstProfit {worstProfit[i]}");
+            }
+
+            for (int i = 0, allWorstMonthsindexes = 0; i < worstProfit.Length; i++)
+            {
+                for (int j = 0; j < profit.Length; j++)
+                {
+                    if (worstProfit[i] == profit[j])
                     {
-                        worstProfitIndexes[i] = j;
+                        allWorstMonths[allWorstMonthsindexes] = j;
+                        allWorstMonthsindexes++;
                     }
                 }
             }
 
-            // На объекте Array вызываем метод Sort и передаем ему в качестве параметра массив worstProfitIndexes
-            Array.Sort(worstProfitIndexes);
 
-            // Выводим информацию по месяцам с наихудшей прибылью в порядке возрастания месяцев
-            Console.WriteLine("Итого, худшая прибыль в следующие месяцы:");
-            for (int i = 0; i < worstProfitIndexes.Length; i++)
+            Console.WriteLine(new string('*', 50));
+            Array.Sort(allWorstMonths);
+
+            Console.WriteLine("Месяцы с наихудшей прибылью:");
+            for (int i = 0; i < allWorstMonths.Length; i++)
             {
-                Console.Write($"{months[worstProfitIndexes[i]],-15}");
+                Console.Write($"{months[allWorstMonths[i]],-15}");
             }
             Console.WriteLine();
-            for (int i = 0; i < worstProfitIndexes.Length; i++)
+            for (int i = 0; i < allWorstMonths.Length; i++)
             {
-                Console.Write($"{profit[worstProfitIndexes[i]],-15}");
+                Console.Write($"{profit[allWorstMonths[i]],-15}");
             }
-            Console.WriteLine();
+
             #endregion
 
             // Delay

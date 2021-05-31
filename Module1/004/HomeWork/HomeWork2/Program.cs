@@ -29,12 +29,15 @@ namespace HomeWork2
                 }
             }
 
+            // Выясним длину самой длинной (нижней) последовательности
+            string mostWidthString = string.Join(" ", PascaleTriangleJaggedArray[n - 1]);
+            int stringLength = mostWidthString.Length;
+
             for (int i = 0; i < PascaleTriangleJaggedArray.Length; i++)
             {
-                for (int j = 0; j < PascaleTriangleJaggedArray[i].Length; j++)
-                {
-                    Console.Write("{0,-3} ", PascaleTriangleJaggedArray[i][j]);
-                }
+
+                Console.SetCursorPosition((mostWidthString.Length - string.Join(" ", PascaleTriangleJaggedArray[i]).Length) /2, Console.CursorTop);
+                Console.Write( string.Join(" ", PascaleTriangleJaggedArray[i]));
                 Console.WriteLine();
             }
 

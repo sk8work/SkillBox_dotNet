@@ -19,9 +19,11 @@ namespace HomeWork3
             Console.WriteLine("Матрица 3x3");
             int[,] arr3_3 = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-            for (int i = 0; i < arr3_3.GetLength(0); i++)
+            int rows_arr3_3 = arr3_3.GetLength(0);
+            int cols_arr3_3 = arr3_3.GetLength(1);
+            for (int i = 0; i < rows_arr3_3; i++)
             {
-                for (int j = 0; j < arr3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arr3_3; j++)
                 {
                     Console.Write($"{arr3_3[i, j]}\t");
                 }
@@ -32,9 +34,9 @@ namespace HomeWork3
 
             Console.WriteLine($"Умножим матрицу на число {mult}: ");
 
-            for (int i = 0; i < arr3_3.GetLength(0); i++)
+            for (int i = 0; i < rows_arr3_3; i++)
             {
-                for (int j = 0; j < arr3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arr3_3; j++)
                 {
                     arr3_3[i, j] *= mult;
                     Console.Write($"{arr3_3[i, j]}\t");
@@ -54,9 +56,11 @@ namespace HomeWork3
 
             int[,] arrA3_3 = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-            for (int i = 0; i < arrA3_3.GetLength(0); i++)
+            int rows_arrA3_3 = arrA3_3.GetLength(0);
+            int cols_arrA3_3 = arrA3_3.GetLength(1);
+            for (int i = 0; i < rows_arrA3_3; i++)
             {
-                for (int j = 0; j < arrA3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arrA3_3; j++)
                 {
                     Console.Write($"{arrA3_3[i, j]}\t");
                 }
@@ -67,9 +71,12 @@ namespace HomeWork3
 
             int[,] arrB3_3 = new int[3, 3] { { 3, 4, 5 }, { 6, 7, 8 }, { 9, 10, 11 } };
 
-            for (int i = 0; i < arrB3_3.GetLength(0); i++)
+            int rows_arrB3_3 = arrB3_3.GetLength(0);
+            int cols_arrB3_3 = arrB3_3.GetLength(1);
+
+            for (int i = 0; i < rows_arrB3_3; i++)
             {
-                for (int j = 0; j < arrB3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arrB3_3; j++)
                 {
                     Console.Write($"{arrB3_3[i, j]}\t");
                 }
@@ -78,11 +85,11 @@ namespace HomeWork3
 
             Console.WriteLine("Сложим матрицы A и B");
 
-            if ((arrA3_3.GetLength(0) == arrB3_3.GetLength(0)) && (arrA3_3.GetLength(1) == arrB3_3.GetLength(1)))
+            if ((rows_arrA3_3 == rows_arrB3_3) && (cols_arrA3_3 == cols_arrB3_3))
             {
-                for (int i = 0; i < arrA3_3.GetLength(0); i++)
+                for (int i = 0; i < rows_arrA3_3; i++)
                 {
-                    for (int j = 0; j < arrA3_3.GetLength(1); j++)
+                    for (int j = 0; j < cols_arrA3_3; j++)
                     {
                         arrA3_3[i, j] = arrA3_3[i, j] + arrB3_3[i, j];
                         Console.Write($"{arrA3_3[i, j]}\t");
@@ -104,9 +111,12 @@ namespace HomeWork3
 
             int[,] arrC3_3 = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-            for (int i = 0; i < arrC3_3.GetLength(0); i++)
+            int rows_arrC3_3 = arrC3_3.GetLength(0);
+            int cols_arrC3_3 = arrC3_3.GetLength(1);
+
+            for (int i = 0; i < rows_arrC3_3; i++)
             {
-                for (int j = 0; j < arrC3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arrC3_3; j++)
                 {
                     Console.Write($"{arrC3_3[i, j]}\t");
                 }
@@ -117,9 +127,12 @@ namespace HomeWork3
 
             int[,] arrD3_3 = new int[3, 3] { { 1, 4, 5 }, { 2, 7, 0 }, { 0, 5, 8 } };
 
-            for (int i = 0; i < arrD3_3.GetLength(0); i++)
+            int rows_arrD3_3 = arrD3_3.GetLength(0);
+            int cols_arrD3_3 = arrD3_3.GetLength(1);
+
+            for (int i = 0; i < rows_arrD3_3; i++)
             {
-                for (int j = 0; j < arrD3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arrD3_3; j++)
                 {
                     Console.Write($"{arrD3_3[i, j]}\t");
                 }
@@ -128,11 +141,11 @@ namespace HomeWork3
 
             Console.WriteLine("Вычтем матрицы C и D");
 
-            if ((arrC3_3.GetLength(0) == arrD3_3.GetLength(0)) && (arrC3_3.GetLength(1) == arrD3_3.GetLength(1)))
+            if ((rows_arrC3_3 == rows_arrD3_3) && (cols_arrC3_3 == cols_arrD3_3))
             {
-                for (int i = 0; i < arrC3_3.GetLength(0); i++)
+                for (int i = 0; i < rows_arrC3_3; i++)
                 {
-                    for (int j = 0; j < arrC3_3.GetLength(1); j++)
+                    for (int j = 0; j < cols_arrC3_3; j++)
                     {
                         arrC3_3[i, j] = arrC3_3[i, j] - arrD3_3[i, j];
                         Console.Write($"{arrC3_3[i, j]}\t");
@@ -151,39 +164,45 @@ namespace HomeWork3
             Console.WriteLine("Пример: ");
 
             Console.WriteLine("Матрица E 3x2");
-            int[,] arrE3_3 = new int[3, 2] { { 1, 2 }, { 4, 5 }, { 7, 8 } };
+            int[,] arrE = new int[3, 2] { { 1, 2 }, { 4, 5 }, { 7, 8 } };
 
-            for (int i = 0; i < arrE3_3.GetLength(0); i++)
+            int rows_arrE = arrE.GetLength(0);
+            int cols_arrE = arrE.GetLength(1);
+
+            for (int i = 0; i < rows_arrE; i++)
             {
-                for (int j = 0; j < arrE3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arrE; j++)
                 {
-                    Console.Write($"{arrE3_3[i, j]}\t");
+                    Console.Write($"{arrE[i, j]}\t");
                 }
                 Console.WriteLine();
             }
 
             Console.WriteLine("Матрица F 2x4");
-            int[,] arrF3_3 = new int[2, 4] { { 4, 5, 3, 2 }, { 7, 8, 5, 1 } };
+            int[,] arrF = new int[2, 4] { { 4, 5, 3, 2 }, { 7, 8, 5, 1 } };
 
-            for (int i = 0; i < arrF3_3.GetLength(0); i++)
+            int rows_arrF = arrF.GetLength(0);
+            int cols_arrF = arrF.GetLength(1);
+
+            for (int i = 0; i < rows_arrF; i++)
             {
-                for (int j = 0; j < arrF3_3.GetLength(1); j++)
+                for (int j = 0; j < cols_arrF; j++)
                 {
-                    Console.Write($"{arrF3_3[i, j]}\t");
+                    Console.Write($"{arrF[i, j]}\t");
                 }
                 Console.WriteLine();
             }
 
             Console.WriteLine("Умножим матрицу E на матрицу F");
 
-            for (int i = 0; i < arrE3_3.GetUpperBound(0) + 1; i++)
+            for (int i = 0; i < rows_arrF; i++)
             {
-                for (int j = 0; j < arrF3_3.GetUpperBound(1) + 1; j++)
+                for (int j = 0; j < cols_arrF; j++)
                 {
                     int res = 0;
-                    for (var k = 0; k < arrE3_3.GetUpperBound(1) + 1; k++)
+                    for (var k = 0; k < cols_arrE; k++)
                     {
-                        res += arrE3_3[i, k] * arrF3_3[k, j];
+                        res += arrE[i, k] * arrF[k, j];
                     }
                     Console.Write($"{res}\t");
                 }
