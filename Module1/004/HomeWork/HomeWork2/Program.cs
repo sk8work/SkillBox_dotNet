@@ -9,6 +9,9 @@ namespace HomeWork2
         static void Main(string[] args)
         {
             Console.WriteLine("Вывести на экран треугольник Паскаля");
+
+
+            #region Создадим Jagged Array и заполним его значениями
             Console.Write("Введите размер треугольника: ");
             int n = Convert.ToInt32(Console.ReadLine());
 
@@ -29,6 +32,9 @@ namespace HomeWork2
                 }
             }
 
+            #endregion
+
+            #region Вывод треугольника Паскаля
             // Выясним длину самой длинной (нижней) последовательности
             string mostWidthString = string.Join(" ", PascaleTriangleJaggedArray[n - 1]);
             int stringLength = mostWidthString.Length;
@@ -40,6 +46,7 @@ namespace HomeWork2
                 Console.Write( string.Join(" ", PascaleTriangleJaggedArray[i]));
                 Console.WriteLine();
             }
+            #endregion
 
             // Delay
             Console.ReadKey();

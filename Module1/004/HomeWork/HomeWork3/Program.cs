@@ -33,13 +33,13 @@ namespace HomeWork3
             int mult = 5;
 
             Console.WriteLine($"Умножим матрицу на число {mult}: ");
-
+            int[,] arr3_3_result = new int[rows_arr3_3, cols_arr3_3];
             for (int i = 0; i < rows_arr3_3; i++)
             {
                 for (int j = 0; j < cols_arr3_3; j++)
                 {
-                    arr3_3[i, j] *= mult;
-                    Console.Write($"{arr3_3[i, j]}\t");
+                    arr3_3_result[i, j] *= mult;
+                    Console.Write($"{arr3_3_result[i, j]}\t");
                 }
                 Console.WriteLine();
             }
@@ -58,6 +58,8 @@ namespace HomeWork3
 
             int rows_arrA3_3 = arrA3_3.GetLength(0);
             int cols_arrA3_3 = arrA3_3.GetLength(1);
+
+            // Выводим матрицу в консоль
             for (int i = 0; i < rows_arrA3_3; i++)
             {
                 for (int j = 0; j < cols_arrA3_3; j++)
@@ -67,13 +69,14 @@ namespace HomeWork3
                 Console.WriteLine();
             }
 
-            Console.WriteLine("Матрица B3x3");
+            Console.WriteLine("Матрица B 3x3");
 
             int[,] arrB3_3 = new int[3, 3] { { 3, 4, 5 }, { 6, 7, 8 }, { 9, 10, 11 } };
 
             int rows_arrB3_3 = arrB3_3.GetLength(0);
             int cols_arrB3_3 = arrB3_3.GetLength(1);
 
+            // Выводим матрицу в консоль
             for (int i = 0; i < rows_arrB3_3; i++)
             {
                 for (int j = 0; j < cols_arrB3_3; j++)
@@ -87,12 +90,13 @@ namespace HomeWork3
 
             if ((rows_arrA3_3 == rows_arrB3_3) && (cols_arrA3_3 == cols_arrB3_3))
             {
+                int[,] arrBresult = new int[rows_arr3_3, cols_arr3_3];
                 for (int i = 0; i < rows_arrA3_3; i++)
                 {
                     for (int j = 0; j < cols_arrA3_3; j++)
                     {
-                        arrA3_3[i, j] = arrA3_3[i, j] + arrB3_3[i, j];
-                        Console.Write($"{arrA3_3[i, j]}\t");
+                        arrBresult[i, j] = arrA3_3[i, j] + arrB3_3[i, j];
+                        Console.Write($"{arrBresult[i, j]}\t");
                     }
                     Console.WriteLine();
                 }
@@ -143,12 +147,13 @@ namespace HomeWork3
 
             if ((rows_arrC3_3 == rows_arrD3_3) && (cols_arrC3_3 == cols_arrD3_3))
             {
+                int[,] arrCresult = new int[rows_arrC3_3, cols_arrC3_3];
                 for (int i = 0; i < rows_arrC3_3; i++)
                 {
                     for (int j = 0; j < cols_arrC3_3; j++)
                     {
-                        arrC3_3[i, j] = arrC3_3[i, j] - arrD3_3[i, j];
-                        Console.Write($"{arrC3_3[i, j]}\t");
+                        arrCresult[i, j] = arrC3_3[i, j] - arrD3_3[i, j];
+                        Console.Write($"{arrCresult[i, j]}\t");
                     }
                     Console.WriteLine();
                 }
