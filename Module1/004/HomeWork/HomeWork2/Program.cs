@@ -10,14 +10,24 @@ namespace HomeWork2
         {
             Console.WriteLine("Вывести на экран треугольник Паскаля");
 
+            int row, cellWidth;
+            int[][] PascaleTriangleJaggedArray;
+            FillPascaleTriangle(out row, out cellWidth, out PascaleTriangleJaggedArray);
 
-            #region Создадим Jagged Array и заполним его значениями
+            PrintPascale(row, cellWidth, PascaleTriangleJaggedArray);
+
+            // Delay
+            Console.ReadKey();
+        }
+
+        private static void FillPascaleTriangle(out int row, out int cellWidth, out int[][] PascaleTriangleJaggedArray)
+        {
             Console.Write("Введите размер треугольника: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-
-            int[][] PascaleTriangleJaggedArray = new int[n][];
+            row = Convert.ToInt32(Console.ReadLine());
+            //int row = 6;
+            cellWidth = 4;
+            PascaleTriangleJaggedArray = new int[row][];
             PascaleTriangleJaggedArray[0] = new int[] { 1 };
-
             for (int i = 1; i < PascaleTriangleJaggedArray.Length; i++)
             {
                 PascaleTriangleJaggedArray[i] = new int[i + 1];
@@ -31,25 +41,25 @@ namespace HomeWork2
                     }
                 }
             }
+        }
 
-            #endregion
+        private static void PrintPascale(int row, int cellWidth, int[][] PascaleTriangleJaggedArray)
+        {
+            int col = cellWidth * row;
 
-            #region Вывод треугольника Паскаля
-            // Выясним длину самой длинной (нижней) последовательности
-            string mostWidthString = string.Join(" ", PascaleTriangleJaggedArray[n - 1]);
-            int stringLength = mostWidthString.Length;
-
-            for (int i = 0; i < PascaleTriangleJaggedArray.Length; i++)
+            for (int i = 0; i < row; i++)
             {
-
-                Console.SetCursorPosition((mostWidthString.Length - string.Join(" ", PascaleTriangleJaggedArray[i]).Length) /2, Console.CursorTop);
-                Console.Write( string.Join(" ", PascaleTriangleJaggedArray[i]));
+                for (int j = 0; j < PascaleTriangleJaggedArray[i].Length; j++)
+                {
+                    Console.SetCursorPosition(col, Console.CursorTop);
+                    col += cellWidth * 2;
+                    Console.Write($"{PascaleTriangleJaggedArray[i][j],6}");
+                }
+                col = cellWidth * row - cellWidth * (i + 1);
                 Console.WriteLine();
             }
-            #endregion
-
-            // Delay
-            Console.ReadKey();
         }
+
+       
     }
 }
