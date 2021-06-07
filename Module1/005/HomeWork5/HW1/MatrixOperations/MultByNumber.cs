@@ -21,9 +21,9 @@ namespace HW1
 
             PrintMatrix(startMatrix);
 
-            GetNumber();
+            N = GetNumber();
 
-            GetResultMatrix();
+            resultMatrix = GetResultMatrix(Rows, Cols, startMatrix);
 
             PrintMatrix(resultMatrix);
         }
@@ -47,17 +47,18 @@ namespace HW1
         /// <summary>
         /// Получаем итоговую матрицу умножением стартовой матрицы на число
         /// </summary>
-        private void GetResultMatrix()
+        private int[,] GetResultMatrix(int rows, int cols, int[,] arr)
         {
-            resultMatrix = new int[Rows, Cols];
+            int[,] result = new int[rows, cols];
 
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < Cols; j++)
                 {
-                    resultMatrix[i, j] = startMatrix[i, j] * N;
+                    result[i, j] = arr[i, j] * N;
                 }
             }
+            return result;
         }
 
         /// <summary>
@@ -79,10 +80,11 @@ namespace HW1
         /// <summary>
         /// Получаем значение мультипликатора с консоли
         /// </summary>
-        private void GetNumber()
+        private int GetNumber()
         {
             Console.Write("На какое число умножить матрицу?: ");
-            N = Convert.ToInt32(Console.ReadLine());
+            int result = Convert.ToInt32(Console.ReadLine());
+            return result;
         }
     }
 }

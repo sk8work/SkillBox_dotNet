@@ -11,14 +11,35 @@ namespace HW1
         Random r = new Random();
         public int Rows { get; set; }
         public int Cols { get; set; }
-
+        bool isTrue = false;
 
         public void Get2DMatrixSize()
         {
-            Console.Write("Введите количество строк: ");
-            Rows = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите количество столбцов: ");
-            Cols = Convert.ToInt32(Console.ReadLine());
+            while(!isTrue)
+            {
+                Console.Write("Введите количество строк: ");
+                Rows = Convert.ToInt32(Console.ReadLine());
+                if (Rows < 0)
+                {
+                    Console.WriteLine("Матриц с отрицательным числом строк не существует!! Попробуйте еще раз.");
+                    continue;
+                }
+                isTrue = true;
+            }
+
+
+            isTrue = false;
+            while (!isTrue)
+            {
+                Console.Write("Введите количество столбцов: ");
+                Cols = Convert.ToInt32(Console.ReadLine());
+                if (Rows < 0)
+                {
+                    Console.WriteLine("Матриц с отрицательным числом столбцов не существует!! Попробуйте еще раз.");
+                    continue;
+                }
+                isTrue = true;
+            }
         }
 
         public int[,] Fill2DMatrix()
