@@ -9,7 +9,6 @@ namespace HW2
     class SplitTextGetLowerString
     {
         public string InnerString { get; set; }
-        string[] SortedString { get; set; }
 
         public SplitTextGetLowerString()
         {
@@ -25,6 +24,10 @@ namespace HW2
             PrintLine();
         }
 
+        /// <summary>
+        /// Получаем строку от пользователя
+        /// </summary>
+        /// <returns></returns>
         public string GetString()
         {
             Console.WriteLine("Введите любую строку");

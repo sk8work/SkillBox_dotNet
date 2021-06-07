@@ -13,6 +13,8 @@ namespace HW2
         {
             SplitTextGetLowerString str = new SplitTextGetLowerString();
 
+            // Delay
+            Console.ReadKey();
         }
     }
 }
