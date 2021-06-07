@@ -34,6 +34,11 @@ namespace HW3
             return getString;
         }
 
+        /// <summary>
+        /// Приводим строку к нижнему регистру и удаляем повторяющиеся подряд символы
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public char[] GetFormattedAndCutString(string str)
         {
             string lowerString =  str.ToLower();
