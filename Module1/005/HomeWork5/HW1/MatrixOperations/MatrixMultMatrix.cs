@@ -29,7 +29,7 @@ namespace HW1
             PrintMatrix(startMatrix2);
             PrintLine();
 
-            GetResultMatrix();
+            resultMatrix = GetResultMatrix(startMatrix1, startMatrix2);
 
             PrintLine();
 
@@ -42,7 +42,7 @@ namespace HW1
         /// </summary>
         private void CheckLength()
         {
-            while (startMatrix1.GetLength(0) != startMatrix2.GetLength(1))
+            while (startMatrix1.GetLength(1) != startMatrix2.GetLength(0))
             {
                 Console.WriteLine("Вы ввели неверный размер второй матрицы. Попробуйте еще раз");
                 startMatrix2 = GetMatrix();
@@ -76,24 +76,21 @@ namespace HW1
         /// <summary>
         /// Получаем итоговую матрицу перемножением двух матриц
         /// </summary>
-        private void GetResultMatrix()
+        private int[,] GetResultMatrix(int[,] arr1, int[,] arr2)
         {
-            Rows = startMatrix1.GetLength(0);
-            Cols = startMatrix2.GetLength(1);
-            int tempRows = startMatrix2.GetLength(0);
+            int rows = arr1.GetLength(0);
+            int cols = arr1.GetLength(1);
 
-            resultMatrix = new int[Rows, Cols];
+            int[,] resultMatrix = new int[rows, cols];
 
-            for (int i = 0; i < Rows; i++)
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < startMatrix2.GetLength(1); j++)
+                for (int j = 0; j < cols; j++)
                 {
-                    for (int k = 0; k < tempRows; k++)
-                    {
-                        resultMatrix[i, j] += startMatrix1[i, k] * startMatrix2[k, j];
-                    }
+                    resultMatrix[i, j] = arr1[i, j] + arr2[i, j];
                 }
             }
+            return resultMatrix;
         }
 
         /// <summary>

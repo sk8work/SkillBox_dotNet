@@ -27,7 +27,7 @@ namespace HW1
 
             PrintMatrix(startMatrix2);
 
-            GetResultMatrix();
+            resultMatrix = GetResultMatrix(startMatrix1, startMatrix2);
 
             PrintLine();
 
@@ -60,19 +60,23 @@ namespace HW1
         }
 
         /// <summary>
-        /// Получаем итоговую матрицу сложением элементов матрицы с заданным числом
+        /// Получаем итоговую матрицу сложением элементов матриц
         /// </summary>
-        private void GetResultMatrix()
+        private int[,] GetResultMatrix(int[,] arr1, int[,] arr2)
         {
-            resultMatrix = new int[Rows, Cols];
+            int rows = arr1.GetLength(0);
+            int cols = arr1.GetLength(1);
 
-            for (int i = 0; i < Rows; i++)
+            int[,] resultMatrix = new int[rows, cols];
+
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < Cols; j++)
+                for (int j = 0; j < cols; j++)
                 {
-                    resultMatrix[i, j] = startMatrix1[i, j] + startMatrix2[i, j];
+                    resultMatrix[i, j] = arr1[i, j] + arr2[i, j];
                 }
             }
+            return resultMatrix;
         }
 
         /// <summary>

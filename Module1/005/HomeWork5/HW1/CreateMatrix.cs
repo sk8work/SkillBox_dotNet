@@ -18,7 +18,20 @@ namespace HW1
             while(!isTrue)
             {
                 Console.Write("Введите количество строк: ");
-                Rows = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    Rows = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Вы ввели неверные данные, попробуйте еще раз");
+                    continue;
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Вы ввели слишком большое значение, попробуйте еще раз");
+                    continue;
+                }
                 if (Rows < 0)
                 {
                     Console.WriteLine("Матриц с отрицательным числом строк не существует!! Попробуйте еще раз.");

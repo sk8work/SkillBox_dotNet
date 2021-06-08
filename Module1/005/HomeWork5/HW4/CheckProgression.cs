@@ -24,7 +24,7 @@ namespace HW4
             }
 
             // Примеры, показывающие заранее известный результат (контрольные примеры)
-            //Console.WriteLine($"Является ли массив числовой последовательнстью и арифметической прогрессией: {IsArrAriphmeticProgression(new int[] { 1,2,3,4,5,6})}"); //true
+            //Console.WriteLine($"Является ли массив числовой последовательнстью и арифметической прогрессией: {IsArrAriphmeticProgression(new int[] { 1,0,0})}"); //false
             //Console.WriteLine($"Является ли массив числовой последовательнстью и геометрической прогрессией: {IsArrGometricProgression(new int[] { 1, 2, 3, 4, 5, 6 })}"); //false
 
             //Console.WriteLine($"Является ли массив числовой последовательнстью и арифметической прогрессией: {IsArrAriphmeticProgression(new int[] { 1, 2, 4, 8, 16, 32 })}"); //false
@@ -60,18 +60,32 @@ namespace HW4
         /// <returns></returns>
         public bool IsArrAriphmeticProgression(int[] arr)
         {
-            bool isTrue = true;
+            // bool isTrue = true;
             int length = arr.Length;
+
+            if (length < 3)
+                return false;
+
+            for (int i = 0; i < length; i++)
+            {
+                for (int j = i + 1; j < length; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+
             for (int i = 1; i < length - 1; i++)
             {
                 if (arr[i] != (arr[i - 1] + arr[i + 1]) / 2)
                 {
-                    isTrue = false;
-                    break;
+                    return false;
                 }
             }
 
-            return isTrue;
+            return true;
         }
 
         /// <summary>
@@ -81,20 +95,30 @@ namespace HW4
         /// <returns></returns>
         public bool IsArrGometricProgression(int[] arr)
         {
-            bool isTrue = true;
             int length = arr.Length;
+
+            if (length < 3)
+                return false;
+
+            for (int i = 0; i < length; i++)
+            {
+                for (int j = i + 1; j < length; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+
             for (int i = 1; i < length - 1; i++)
             {
                 if (arr[i] * arr[i] != (arr[i - 1] * arr[i + 1]))
                 {
-                    isTrue = false;
-                    break;
+                    return false;
                 }
             }
-
-            return isTrue;
-
-            return isTrue;
+            return true;
         }
 
         public void PrintString()

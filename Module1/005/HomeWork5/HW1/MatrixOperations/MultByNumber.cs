@@ -9,7 +9,7 @@ namespace HW1
     class MultByNumber
     {
         int N { get; set; }
-        int[,] startMatrix; 
+        int[,] startMatrix;
         int[,] resultMatrix;
 
         int Rows { get; set; }
@@ -23,7 +23,7 @@ namespace HW1
 
             N = GetNumber();
 
-            resultMatrix = GetResultMatrix(Rows, Cols, startMatrix);
+            resultMatrix = GetResultMatrix(N, startMatrix);
 
             PrintMatrix(resultMatrix);
         }
@@ -47,15 +47,17 @@ namespace HW1
         /// <summary>
         /// Получаем итоговую матрицу умножением стартовой матрицы на число
         /// </summary>
-        private int[,] GetResultMatrix(int rows, int cols, int[,] arr)
+        private int[,] GetResultMatrix(int n, int[,] arr)
         {
+            int rows = arr.GetLength(0);
+            int cols = arr.GetLength(1);
             int[,] result = new int[rows, cols];
 
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < Cols; j++)
                 {
-                    result[i, j] = arr[i, j] * N;
+                    result[i, j] = arr[i, j] * n;
                 }
             }
             return result;
