@@ -16,7 +16,7 @@ namespace HW4
             {
                 CreateArray createArray = new CreateArray();
                 Sleep();
-                Console.WriteLine($"Исходный сгенерированный массив №{i+1}: ");
+                Console.WriteLine($"Исходный сгенерированный массив №{i + 1}: ");
                 PrintArr(createArray.Arr);
                 Console.WriteLine($"Является ли массив числовой последовательнстью и арифметической прогрессией: {IsArrAriphmeticProgression(createArray.Arr)}");
                 Console.WriteLine($"Является ли массив числовой последовательнстью и геометрической прогрессией: {IsArrGometricProgression(createArray.Arr)}");
@@ -48,11 +48,11 @@ namespace HW4
         {
             foreach (int i in arr)
             {
-                Console.Write($"{i, -5}");
+                Console.Write($"{i,-5}");
             }
             Console.WriteLine();
         }
-        
+
         /// <summary>
         /// Проверяет, является ли массив арифметической прогрессией
         /// </summary>
@@ -62,9 +62,9 @@ namespace HW4
         {
             bool isTrue = true;
             int length = arr.Length;
-            for (int i = 1; i < length-1; i++)
+            for (int i = 1; i < length - 1; i++)
             {
-                if (arr[i] != (arr[i-1] + arr[i+1])/2)
+                if (arr[i] != (arr[i - 1] + arr[i + 1]) / 2)
                 {
                     isTrue = false;
                     break;
