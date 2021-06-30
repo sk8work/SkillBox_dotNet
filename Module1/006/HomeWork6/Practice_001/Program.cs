@@ -123,7 +123,6 @@ namespace Practice_001
             Console.WriteLine($"timeSpan.TotalMilliseconds = {timeSpan.TotalMilliseconds}");
 
             #endregion
-
         }
     }
 }
