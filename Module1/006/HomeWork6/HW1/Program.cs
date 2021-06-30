@@ -31,7 +31,10 @@ namespace HW1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Starter starter = new Starter();
+
+            // Delay
+            Console.ReadKey();
         }
     }
 }
