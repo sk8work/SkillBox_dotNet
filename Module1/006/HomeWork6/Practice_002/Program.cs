@@ -1,4 +1,4 @@
-﻿// работа со строками. Класс String
+﻿// работа со строками. Класс String, Char
 
 using System;
 
@@ -8,6 +8,7 @@ namespace Practice_002
     {
         static void Main(string[] args)
         {
+            #region String
             string str = "Visual lausiV";
             Console.WriteLine($"str.IndexOf('i') = {str.IndexOf('i')}");
             Console.WriteLine($"str.LastIndexOf('i') = {str.LastIndexOf('i')}");
@@ -51,8 +52,26 @@ namespace Practice_002
             test = "Skill";
             Console.WriteLine($"StringIsNullOrEmpte = {String.IsNullOrEmpty(test)}"); // False
 
+            #endregion
 
+            #region Char
 
+            char c = 'c';
+            //char.IsDigit
+            //char.IsLetter
+            //char.IsLower
+            //char.IsUpper
+
+            char[] symbols = "symbols".ToCharArray();
+            foreach (var item in symbols)
+            {
+                Console.Write($"{item}");
+            }
+
+            string newStr = new String(symbols);
+
+            Console.WriteLine($"string newStr = {newStr}");
+            #endregion
 
             // Delay
             Console.ReadKey();
