@@ -31,7 +31,10 @@ namespace HW1
     {
         static void Main(string[] args)
         {
-            Starter starter = new Starter();
+            GetNumberFromFile fs = new GetNumberFromFile();
+
+            Console.WriteLine(fs.Number);
+            
 
             // Delay
             Console.ReadKey();

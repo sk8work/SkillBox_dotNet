@@ -1,0 +1,15 @@
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\bin\Debug\net5.0\Practice_004_02.exe
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\bin\Debug\net5.0\Practice_004_02.deps.json
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\bin\Debug\net5.0\Practice_004_02.runtimeconfig.json
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\bin\Debug\net5.0\Practice_004_02.runtimeconfig.dev.json
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\bin\Debug\net5.0\Practice_004_02.dll
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\bin\Debug\net5.0\ref\Practice_004_02.dll
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\bin\Debug\net5.0\Practice_004_02.pdb
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\Practice_004_02.GeneratedMSBuildEditorConfig.editorconfig
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\Practice_004_02.AssemblyInfoInputs.cache
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\Practice_004_02.AssemblyInfo.cs
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\Practice_004_02.csproj.CoreCompileInputs.cache
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\Practice_004_02.dll
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\ref\Practice_004_02.dll
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\Practice_004_02.pdb
+D:\SkillBox_dotNet\Module1\006\HomeWork6\Practice_004_02\obj\Debug\net5.0\Practice_004_02.genruntimeconfig.cache

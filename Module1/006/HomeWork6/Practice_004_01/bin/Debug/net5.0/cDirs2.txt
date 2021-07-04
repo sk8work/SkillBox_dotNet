@@ -1,0 +1,21 @@
+$Recycle.Bin
+$WinREAgent
+Config.Msi
+Documents and Settings
+DRIVERS
+eSupport
+Go
+MAMP
+Microsoft
+MSOCache
+OneDriveTemp
+PerfLogs
+Program Files
+Program Files (x86)
+ProgramData
+Python38
+Recovery
+SQL2019
+System Volume Information
+Users
+Windows
