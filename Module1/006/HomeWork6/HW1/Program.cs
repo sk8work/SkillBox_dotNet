@@ -19,6 +19,8 @@
 //введём 2 — заполнить данные и добавить новую запись в конец файла.
 
 using System;
+using System.IO;
+using System.Text;
 
 namespace HW1
 {
@@ -36,7 +38,12 @@ namespace HW1
         {
 
 
+            string empListFile = "empList.txt";
 
+            using (FileStream fs = new(empListFile, FileMode.OpenOrCreate))
+            {
+
+            }
 
 
             // Delay
