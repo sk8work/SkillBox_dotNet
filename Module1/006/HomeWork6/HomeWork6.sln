@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW1", "HW1\HW1.csproj", "{F62DF559-5E5D-4498-859C-02389826C41C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW6", "HW1\HW6.csproj", "{F62DF559-5E5D-4498-859C-02389826C41C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice_001", "Practice_001\Practice_001.csproj", "{B4FB1B4A-0CBA-4F51-ADA1-41CC7969828B}"
 EndProject
@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice_003_02", "Practice
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice_003_03", "Practice_003_03\Practice_003_03.csproj", "{B6FBCF7B-097A-4062-8630-4B0131C86963}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice_004_01", "Practice_004_01\Practice_004_01.csproj", "{07C12D47-2FA9-4065-A5D8-1D08394D6F1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice_004_01", "Practice_004_01\Practice_004_01.csproj", "{07C12D47-2FA9-4065-A5D8-1D08394D6F1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice_004_02", "Practice_004_02\Practice_004_02.csproj", "{FCFCD2CE-EA54-47BF-8C07-7CB0B814383B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice_004_02", "Practice_004_02\Practice_004_02.csproj", "{FCFCD2CE-EA54-47BF-8C07-7CB0B814383B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice_004_03", "Practice_004_03\Practice_004_03.csproj", "{B2B0136A-634E-4650-9203-83D0DBE8AB49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice_004_03", "Practice_004_03\Practice_004_03.csproj", "{B2B0136A-634E-4650-9203-83D0DBE8AB49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

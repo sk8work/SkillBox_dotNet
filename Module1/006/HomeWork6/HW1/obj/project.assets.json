@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SkillBox_dotNet\\SkillBox_dotNet\\Module1\\006\\HomeWork6\\HW1\\HW1.csproj",
-      "projectName": "HW1",
-      "projectPath": "D:\\SkillBox_dotNet\\SkillBox_dotNet\\Module1\\006\\HomeWork6\\HW1\\HW1.csproj",
+      "projectUniqueName": "D:\\SkillBox_dotNet\\SkillBox_dotNet\\Module1\\006\\HomeWork6\\HW1\\HW6.csproj",
+      "projectName": "HW6",
+      "projectPath": "D:\\SkillBox_dotNet\\SkillBox_dotNet\\Module1\\006\\HomeWork6\\HW1\\HW6.csproj",
       "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
       "outputPath": "D:\\SkillBox_dotNet\\SkillBox_dotNet\\Module1\\006\\HomeWork6\\HW1\\obj\\",
       "projectStyle": "PackageReference",

@@ -65,24 +65,24 @@ namespace HW1
 
                 string note = string.Empty;
 
-                note += $"{Convert.ToString(id)}\t";
+                note += $"{Convert.ToString(id)}#";
 
-                note += $"{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}\t";
+                note += $"{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#";
 
                 Console.WriteLine("\nВведите Ф.И.О.: ");
-                note += $"{Console.ReadLine()}\t";
+                note += $"{Console.ReadLine()}#";
 
                 Console.Write("Введите Возраст: ");
-                note += $"{Console.ReadLine()}\t";
+                note += $"{Console.ReadLine()}#";
 
                 Console.Write("Введите Рост: ");
-                note += $"{Console.ReadLine()}\t";
+                note += $"{Console.ReadLine()}#";
 
                 Console.Write("Введите Дату рождения: ");
-                note += $"{Console.ReadLine()}\t";
+                note += $"{Console.ReadLine()}#";
 
                 Console.Write("Введите Место рождения: ");
-                note += $"{Console.ReadLine()}\t";
+                note += $"{Console.ReadLine()}#";
 
                 ss.WriteLine($"{note}");
             }
@@ -103,8 +103,8 @@ namespace HW1
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        string[] data = line.Split('\t');
-                        Console.WriteLine($"\n{data[0],-5}{data[1],-20}{data[2],-20}{data[3],-10}{data[4],-7}{data[5],-17}{data[6],-17}");
+                        string[] data = line.Split('#');
+                        Console.WriteLine($"{data[0],-5}{data[1],-20}{data[2],-20}{data[3],-10}{data[4],-7}{data[5],-17}{data[6],-17}");
                     }
                 }
             } else
@@ -156,7 +156,7 @@ namespace HW1
 
         static void Main(string[] args)
         {
-            Game("db.csv");
+            Game("db.txt");
 
             // Delay
             Delay();
