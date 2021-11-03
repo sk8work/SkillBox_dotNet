@@ -174,7 +174,7 @@ namespace HW6_old_version_
                     {
                         if ((k >= Math.Pow(2, i)) && (k < Math.Pow(2, i + 1)))
                         {
-                            ss.Write($"{Convert.ToString(k)};");
+                            ss.Write($"{Convert.ToString(k)}#");
                             continue;
                         }
                         if (k > Math.Pow(2, i + 1))
