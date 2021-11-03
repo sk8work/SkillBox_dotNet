@@ -23,7 +23,7 @@ namespace Practice_003_03
         }
         static void Main(string[] args)
         {
-            #region Dirwctory, DirectoryInfo
+            #region Directory, DirectoryInfo
 
             DirectoryInfo directoryInfo = new DirectoryInfo(@"c:\");
 

@@ -1,0 +1,16 @@
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\bin\Debug\net5.0\HW6(old version).exe
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\bin\Debug\net5.0\HW6(old version).deps.json
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\bin\Debug\net5.0\HW6(old version).runtimeconfig.json
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\bin\Debug\net5.0\HW6(old version).runtimeconfig.dev.json
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\bin\Debug\net5.0\HW6(old version).dll
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\bin\Debug\net5.0\ref\HW6(old version).dll
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\bin\Debug\net5.0\HW6(old version).pdb
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).GeneratedMSBuildEditorConfig.editorconfig
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).AssemblyInfoInputs.cache
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).AssemblyInfo.cs
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).csproj.CoreCompileInputs.cache
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).dll
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\ref\HW6(old version).dll
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).pdb
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).genruntimeconfig.cache
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW6(old version)\obj\Debug\net5.0\HW6(old version).csprojAssemblyReference.cache

@@ -13,3 +13,4 @@ D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW1\obj\Debug\net5.0\HW
 D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW1\obj\Debug\net5.0\ref\HW6.dll
 D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW1\obj\Debug\net5.0\HW6.pdb
 D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW1\obj\Debug\net5.0\HW6.genruntimeconfig.cache
+D:\SkillBox_dotNet\SkillBox_dotNet\Module1\006\HomeWork6\HW1\obj\Debug\net5.0\HW6.csprojAssemblyReference.cache
