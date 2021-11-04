@@ -45,7 +45,7 @@ namespace HW1
         /// <param name="path">FileName (или путь к файлу)</param>
         static void Writer(string path)
         {
-            if(File.Exists(path))
+            if (File.Exists(path))
             {
                 id = 0;
                 using (StreamReader sr = new StreamReader(path, Encoding.Unicode))
@@ -58,11 +58,19 @@ namespace HW1
                     }
                 }
             }
-            
 
+            GetUserInfo(path);
+        }
+
+        /// <summary>
+        /// Получаем данные, формируе строку и записываем ее в файл
+        /// </summary>
+        /// <param name="path"></param>
+        static void GetUserInfo(string path)
+        {
             using (StreamWriter ss = new StreamWriter(path, true, Encoding.Unicode))
             {
-                
+
 
                 string note = string.Empty;
 

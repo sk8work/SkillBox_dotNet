@@ -107,7 +107,7 @@ namespace HW6_old_version_
                 groupsCount++;
             }
 
-            groups = groupsCount + 1;
+            groups = groupsCount;
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace HW6_old_version_
                 groupsCount++;
             }
 
-            groups = groupsCount + 1;
+            groups = groupsCount;
             TimeSpan span = DateTime.Now - before;
             Console.WriteLine();
             Console.WriteLine($"{groups} - групп чисел");
