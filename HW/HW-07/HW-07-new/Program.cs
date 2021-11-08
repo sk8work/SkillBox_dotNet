@@ -26,9 +26,21 @@ namespace HW_07_new
 {
     class Program
     {
+        /// <summary>
+        /// Delay
+        /// </summary>
+        static void Delay()
+        {
+            Console.ReadKey();
+        }
+
         static void Main(string[] args)
         {
-            
+
+
+
+            //Delay
+            Delay();
         }
     }
 }
