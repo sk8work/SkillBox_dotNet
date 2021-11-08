@@ -1,0 +1,16 @@
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\bin\Debug\net5.0\HW-06-new.exe
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\bin\Debug\net5.0\HW-06-new.deps.json
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\bin\Debug\net5.0\HW-06-new.runtimeconfig.json
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\bin\Debug\net5.0\HW-06-new.runtimeconfig.dev.json
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\bin\Debug\net5.0\HW-06-new.dll
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\bin\Debug\net5.0\ref\HW-06-new.dll
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\bin\Debug\net5.0\HW-06-new.pdb
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.csprojAssemblyReference.cache
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.GeneratedMSBuildEditorConfig.editorconfig
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.AssemblyInfoInputs.cache
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.AssemblyInfo.cs
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.csproj.CoreCompileInputs.cache
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.dll
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\ref\HW-06-new.dll
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.pdb
+D:\SkillBox_dotNet\SkillBox_dotNet\HW\HW-06\HW-06-new\obj\Debug\net5.0\HW-06-new.genruntimeconfig.cache

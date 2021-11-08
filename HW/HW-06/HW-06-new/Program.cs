@@ -58,40 +58,51 @@ namespace HW_06_new
                 }
             }
 
-            GetUserInfo(path);
+            string noteToWrite = GetUserInfo();
+            WriteStreamToFile(path, noteToWrite);
         }
 
         /// <summary>
-        /// Получаем данные, формируе строку и записываем ее в файл
+        /// Получаем данные от пользователя и формируем строку
         /// </summary>
         /// <param name="path"></param>
-        static void GetUserInfo(string path)
+        /// <returns>note</returns>
+        static string GetUserInfo()
+        {
+
+            string note = string.Empty;
+
+            note += $"{id}#";
+
+            note += $"{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#";
+
+            Console.WriteLine("\nВведите Ф.И.О.: ");
+            note += $"{Console.ReadLine()}#";
+
+            Console.Write("Введите Возраст: ");
+            note += $"{Console.ReadLine()}#";
+
+            Console.Write("Введите Рост: ");
+            note += $"{Console.ReadLine()}#";
+
+            Console.Write("Введите Дату рождения: ");
+            note += $"{Console.ReadLine()}#";
+
+            Console.Write("Введите Место рождения: ");
+            note += $"{Console.ReadLine()}#";
+
+            return note;
+        }
+
+        /// <summary>
+        /// ПМетод для записи в файл из потока
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="note"></param>
+        static void WriteStreamToFile(string path, string note)
         {
             using (StreamWriter ss = new StreamWriter(path, true, Encoding.Unicode))
             {
-
-
-                string note = string.Empty;
-
-                note += $"{Convert.ToString(id)}#";
-
-                note += $"{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#";
-
-                Console.WriteLine("\nВведите Ф.И.О.: ");
-                note += $"{Console.ReadLine()}#";
-
-                Console.Write("Введите Возраст: ");
-                note += $"{Console.ReadLine()}#";
-
-                Console.Write("Введите Рост: ");
-                note += $"{Console.ReadLine()}#";
-
-                Console.Write("Введите Дату рождения: ");
-                note += $"{Console.ReadLine()}#";
-
-                Console.Write("Введите Место рождения: ");
-                note += $"{Console.ReadLine()}#";
-
                 ss.WriteLine($"{note}");
             }
         }
@@ -107,7 +118,7 @@ namespace HW_06_new
                 using (StreamReader sr = new StreamReader(path, Encoding.Unicode))
                 {
                     string line;
-                    Console.WriteLine($"\n{"ID",-5}{"Дата и время",-20}{"Ф. И. О.",-20}{"Возраст",-10}{"Рост",-7}{"Дата рождения",-17}{"Место рождения",-17}");
+                    Console.WriteLine($"\n{"ID",-5}{"Дата и время",-20}{"Ф. И. О.",-25}{"Возраст",-10}{"Рост",-7}{"Дата рождения",-17}{"Место рождения",-17}");
 
                     while ((line = sr.ReadLine()) != null)
                     {
