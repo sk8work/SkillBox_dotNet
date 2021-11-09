@@ -36,7 +36,12 @@ namespace HW_06_new
             Console.ReadKey();
         }
 
-        static int id = 0;
+        public static int id = 0;
+        static string fio = String.Empty;
+        static int age = 0;
+        static int high = 0;
+        static DateTime birthDate = new DateTime(1990,01,01);
+        static string birthPlace = String.Empty;
 
         /// <summary>
         /// Записываем данные в файл
@@ -58,40 +63,56 @@ namespace HW_06_new
                 }
             }
 
-            string noteToWrite = GetUserInfo();
+            GetUserInfo();
+            string noteToWrite = GetUserString(id, fio, age, high, birthDate, birthPlace);
             WriteStreamToFile(path, noteToWrite);
         }
 
         /// <summary>
-        /// Получаем данные от пользователя и формируем строку
+        /// Формируем строку с данными от пользователя
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns>note</returns>
-        static string GetUserInfo()
+        /// <param name="id"></param>
+        /// <param name="fio"></param>
+        /// <param name="age"></param>
+        /// <param name="high"></param>
+        /// <param name="birthDate"></param>
+        /// <param name="birthPlace"></param>
+        /// <returns></returns>
+        public static string GetUserString(int id, string fio, int age, int high, DateTime birthDate, string birthPlace)
         {
 
             string note = string.Empty;
 
-            note += $"{id}#";
+            note += $"{id}#{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#{fio}#{age}#{high}#{birthDate}#{birthPlace}";
+            return note;
+        }
 
-            note += $"{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#";
-
-            Console.WriteLine("\nВведите Ф.И.О.: ");
-            note += $"{Console.ReadLine()}#";
+        /// <summary>
+        /// Формируем строку с данными от пользователя
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="fio"></param>
+        /// <param name="age"></param>
+        /// <param name="high"></param>
+        /// <param name="birthDate"></param>
+        /// <param name="birthPlace"></param>
+        /// <returns></returns>
+        public static void GetUserInfo()
+        {
+            Console.Write("\nВведите Ф.И.О.: ");
+            fio = Console.ReadLine();
 
             Console.Write("Введите Возраст: ");
-            note += $"{Console.ReadLine()}#";
+            age = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Введите Рост: ");
-            note += $"{Console.ReadLine()}#";
+            high = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Введите Дату рождения: ");
-            note += $"{Console.ReadLine()}#";
+            birthDate = Convert.ToDateTime(Console.ReadLine());
 
             Console.Write("Введите Место рождения: ");
-            note += $"{Console.ReadLine()}#";
-
-            return note;
+            birthPlace = Console.ReadLine();
         }
 
         /// <summary>
