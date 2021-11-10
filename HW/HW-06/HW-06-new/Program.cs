@@ -80,7 +80,6 @@ namespace HW_06_new
         /// <returns></returns>
         public static string GetUserString(int id, string fio, int age, int high, DateTime birthDate, string birthPlace)
         {
-
             string note = string.Empty;
 
             note += $"{id}#{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#{fio}#{age}#{high}#{birthDate}#{birthPlace}";
@@ -129,28 +128,54 @@ namespace HW_06_new
         }
 
         /// <summary>
+        /// Печать заголовка
+        /// </summary>
+        static void PrintHeaderNote()
+        {
+            Console.WriteLine($"\n{"ID",-5}{"Дата и время",-20}{"Ф. И. О.",-25}{"Возраст",-10}{"Рост",-7}{"Дата рождения",-17}{"Место рождения",-17}");
+        }
+
+        /// <summary>
+        /// Печать информации о сотруднике
+        /// </summary>
+        /// <param name="note"></param>
+        static void PrintNote(string note)
+        {
+            string[] data = note.Split('#');
+            Console.WriteLine($"{data[0],-5}{data[1],-20}{data[2],-20}{data[3],-10}{data[4],-7}{data[5],-17}{data[6],-17}");
+        }
+
+        /// <summary>
+        /// Печатает сообщение об ошибке чтения из файла
+        /// </summary>
+        static void ReadError()
+        {
+            Console.WriteLine("\nФайл пуст или не существует. Заполните файл!");
+        }
+
+        /// <summary>
         /// Читаем из файла
         /// </summary>
         /// <param name="path">FileName (или путь к файлу)</param>
         static void Reader(string path)
         {
+            string noteHeader = string.Empty;
             if (File.Exists(path))
             {
                 using (StreamReader sr = new StreamReader(path, Encoding.Unicode))
                 {
                     string line;
-                    Console.WriteLine($"\n{"ID",-5}{"Дата и время",-20}{"Ф. И. О.",-25}{"Возраст",-10}{"Рост",-7}{"Дата рождения",-17}{"Место рождения",-17}");
+                    PrintHeaderNote();
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        string[] data = line.Split('#');
-                        Console.WriteLine($"{data[0],-5}{data[1],-20}{data[2],-20}{data[3],-10}{data[4],-7}{data[5],-17}{data[6],-17}");
+                        PrintNote(line);
                     }
                 }
             }
             else
             {
-                Console.WriteLine("\nФайл пуст или не существует. Заполните файл!");
+                ReadError();
             }
         }
 
