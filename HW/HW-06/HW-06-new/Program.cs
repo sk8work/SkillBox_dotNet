@@ -139,9 +139,20 @@ namespace HW_06_new
         /// Печать информации о сотруднике
         /// </summary>
         /// <param name="note"></param>
-        static void PrintNote(string note)
+        static string[] NoteToArr(string note)
         {
+            //string note = String.Empty;
             string[] data = note.Split('#');
+            return data;
+        }
+
+
+        /// <summary>
+        /// Печатает элементы массива в строку
+        /// </summary>
+        /// <param name="data"></param>
+        static void PrintNote(string[] data)
+        {
             Console.WriteLine($"{data[0],-5}{data[1],-20}{data[2],-20}{data[3],-10}{data[4],-7}{data[5],-17}{data[6],-17}");
         }
 
@@ -169,7 +180,7 @@ namespace HW_06_new
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        PrintNote(line);
+                        PrintNote(NoteToArr(line));
                     }
                 }
             }
