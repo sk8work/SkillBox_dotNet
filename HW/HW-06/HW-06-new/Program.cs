@@ -141,7 +141,6 @@ namespace HW_06_new
         /// <param name="note"></param>
         static string[] NoteToArr(string note)
         {
-            //string note = String.Empty;
             string[] data = note.Split('#');
             return data;
         }

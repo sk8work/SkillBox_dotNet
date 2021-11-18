@@ -90,8 +90,16 @@ namespace HW_06_old
             }
             else
             {
-                Console.WriteLine("\nФайл пуст или не существует. Заполните файл!");
+                PrintEmptyErrorFile();
             }
+        }
+
+        /// <summary>
+        /// Печатает ошибку, если файл пустой
+        /// </summary>
+        static void PrintEmptyErrorFile()
+        {
+            Console.WriteLine("\nФайл пуст или не существует. Заполните файл!");
         }
 
         /// <summary>
@@ -146,14 +154,34 @@ namespace HW_06_old
                     using (GZipStream cs = new GZipStream(ts, CompressionMode.Compress))
                     {
                         ss.CopyTo(cs); // копируем байты из одного потока в другой
-                        Console.WriteLine();
-                        Console.WriteLine("Архивация файла {0} завершена. Было: {1}  стало: {2}.",
-                                          source,
-                                          ss.Length,
-                                          ts.Length);
                     }
                 }
             }
+            PrintSize(source, compressed);
+        }
+
+        /// <summary>
+        /// Возвращает размер файла
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        static int GetSize(string source)
+        {
+            return source.Length; 
+        }
+
+        /// <summary>
+        /// Печатает размер файла до архивации и после архивации
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="compressed"></param>
+        static void PrintSize(string source, string compressed)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Архивация файла {0} завершена. Было: {1}  стало: {2}.",
+                              source,
+                              GetSize(source),
+                              GetSize(compressed));
         }
 
         /// <summary>
