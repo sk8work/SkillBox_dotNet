@@ -21,6 +21,7 @@ namespace HW_07_new
                 Console.WriteLine("Меню программы: ");
                 Console.WriteLine("1 - Добавить сотрудника.");
                 Console.WriteLine("2 - Вывести список сотрудников.");
+                Console.WriteLine("3 - Удалить сотрудника.");
                 Console.WriteLine("q - Выйти из программы");
                 Console.Write(">> ");
                 char choice = ' ';
@@ -35,6 +36,12 @@ namespace HW_07_new
                     case '2':
                         {
                             FileWorker.Reader(path);
+                            break;
+                        }
+                    case '3':
+                        {
+                            string id = ConsoleMethods.GetUserIdForDelete();
+                            FileWorker.Erazer(path, id);
                             break;
                         }
                     case 'q':

@@ -18,20 +18,20 @@ namespace HW_07_new
         {
             if (File.Exists(path))
             {
-                UserInfo.Id = 0;
+                UserInfo.id = 0;
                 using (StreamReader sr = new StreamReader(path, Encoding.Unicode))
                 {
                     string line;
 
                     while ((line = sr.ReadLine()) != null)
                     {
-                        UserInfo.Id += 1;
+                        UserInfo.id += 1;
                     }
                 }
             }
 
             UserInfo.GetUserInfo();
-            string noteToWrite = UserInfo.GetUserString(UserInfo.Id, UserInfo.Fio, UserInfo.Age, UserInfo.High, UserInfo.BirthDate, UserInfo.BirthPlace);
+            string noteToWrite = UserInfo.GetUserString(UserInfo.id, UserInfo.Fio, UserInfo.Age, UserInfo.High, UserInfo.BirthDate, UserInfo.BirthPlace);
             WriteStreamToFile(path, noteToWrite);
         }
 
@@ -57,20 +57,48 @@ namespace HW_07_new
             string noteHeader = string.Empty;
             if (File.Exists(path))
             {
+                string[] lines = File.ReadAllLines(path);
                 using (StreamReader sr = new StreamReader(path, Encoding.Unicode))
                 {
-                    string line;
                     ConsoleMethods.PrintHeaderNote();
 
-                    while ((line = sr.ReadLine()) != null)
+                    foreach (var i in lines)
                     {
-                        ConsoleMethods.PrintNote(UserInfo.NoteToArr(line));
+                        ConsoleMethods.PrintNote(UserInfo.NoteToArr(i));
                     }
                 }
             }
             else
             {
-                ConsoleMethods.ReadError();
+                ConsoleMethods.FileExistError();
+            }
+        }
+
+        /// <summary>
+        /// Выводит запись о сотруднике из файла по переданному Id
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="id"></param>
+        public static void Erazer(string path, string id)
+        {
+            if (File.Exists(path))
+            {
+                var lines = File.ReadAllLines(path);
+                List<string> ls = new List<string>();
+                foreach (var i in lines)
+                {
+                    if (UserInfo.NoteToArr(i)[0] == id)
+                    {
+                        continue;
+                    }
+                    ls.Add(i);
+                }
+
+                File.WriteAllLines(path, ls);
+            }
+            else
+            {
+                ConsoleMethods.FileExistError();
             }
         }
     }

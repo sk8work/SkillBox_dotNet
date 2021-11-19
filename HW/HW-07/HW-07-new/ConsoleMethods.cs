@@ -22,17 +22,40 @@ namespace HW_07_new
         /// <param name="data"></param>
         public static void PrintNote(string[] data)
         {
-            Console.WriteLine($"{data[0],-5}{data[1],-20}{data[2],-20}{data[3],-10}{data[4],-7}{data[5],-17}{data[6],-17}");
+            Console.WriteLine($"{data[0],-5}{data[1],-20}{data[2],-25}{data[3],-10}{data[4],-7}{data[5],-17}{data[6],-17}");
         }
 
         /// <summary>
         /// Печатает сообщение об ошибке чтения из файла
         /// </summary>
-        public static void ReadError()
+        public static void FileExistError()
         {
             Console.WriteLine("\nФайл пуст или не существует. Заполните файл!");
         }
-    }
 
-    
+        /// <summary>
+        /// Печатает сообщение об ошибке чтения из файла
+        /// </summary>
+        public static void IdError()
+        {
+            Console.WriteLine("\nДанного Id не существует. Введите Id.");
+        }
+
+        /// <summary>
+        /// Выводит сообщение об успешном удалении записи сотрудника
+        /// </summary>
+        public static void NoteDeleted()
+        {
+            Console.WriteLine("\nЗапись удалена.");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string GetUserIdForDelete()
+        {
+            Console.Write("\nВведите Id сотрудникка для удаления: ");
+            return Console.ReadLine();
+        }
+    } 
 }

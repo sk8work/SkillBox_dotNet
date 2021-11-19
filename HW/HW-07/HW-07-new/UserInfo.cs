@@ -8,19 +8,23 @@ namespace HW_07_new
 {
     struct UserInfo
     {
-        static int id = 0;
-        static string fio = String.Empty;
-        static int age = 0;
-        static int high = 0;
-        static DateTime birthDate = new DateTime(1990, 01, 01);
-        static string birthPlace = String.Empty;
+        // incapsulated fields
+        public static int id = 0;
+        static string fio;
+        static int age;
+        static int high;
+        static DateTime birthDate;
+        static string birthPlace;
+        static string userChoice;
 
-        public static int Id { get => id; set => id = value; }
+        //public methods
+        //public static int Id { get => id; set => id = value; }
         public static string Fio { get => fio; set => fio = value; }
         public static int Age { get => age; set => age = value; }
         public static int High { get => high; set => high = value; }
         public static DateTime BirthDate { get => birthDate; set => birthDate = value; }
         public static string BirthPlace { get => birthPlace; set => birthPlace = value; }
+        public static string UserChoice { get => userChoice; set => userChoice = value; }
 
         /// <summary>
         /// Формируем строку с данными от пользователя
@@ -77,5 +81,7 @@ namespace HW_07_new
             string[] data = note.Split('#');
             return data;
         }
+
+
     }
 }
