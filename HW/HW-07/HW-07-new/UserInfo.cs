@@ -50,7 +50,6 @@ namespace HW_07_new
             BirthPlace = Console.ReadLine();
         }
 
-
         /// <summary>
         /// Формируем строку с данными от пользователя
         /// </summary>
@@ -67,6 +66,16 @@ namespace HW_07_new
 
             note += $"{id}#{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#{fio}#{age}#{high}#{birthDate}#{birthPlace}";
             return note;
+        }
+
+        /// <summary>
+        /// Формирует массив с информацией о сотруднике (разбивает строку)
+        /// </summary>
+        /// <param name="note"></param>
+        public static string[] NoteToArr(string note)
+        {
+            string[] data = note.Split('#');
+            return data;
         }
     }
 }
