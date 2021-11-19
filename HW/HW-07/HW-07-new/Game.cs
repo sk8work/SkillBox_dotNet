@@ -22,6 +22,7 @@ namespace HW_07_new
                 Console.WriteLine("1 - Добавить сотрудника.");
                 Console.WriteLine("2 - Вывести список сотрудников.");
                 Console.WriteLine("3 - Удалить сотрудника.");
+                Console.WriteLine("4 - Изменить запись.");
                 Console.WriteLine("q - Выйти из программы");
                 Console.Write(">> ");
                 char choice = ' ';
@@ -44,6 +45,12 @@ namespace HW_07_new
                             FileWorker.Erazer(path, id);
                             break;
                         }
+                    case '4':
+                        {
+                            int id = Int32.Parse(ConsoleMethods.GetUserIdForRename());
+                            FileWorker.Renamer(path, id);
+                            break;
+                        }
                     case 'q':
                         {
                             game = false;
@@ -51,7 +58,7 @@ namespace HW_07_new
                         }
                 }
             }
-            Console.WriteLine("\nGood bye!!!");
+            ConsoleMethods.PrintGoodbye();
         }
     }
 }

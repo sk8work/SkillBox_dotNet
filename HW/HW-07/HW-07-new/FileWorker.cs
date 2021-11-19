@@ -75,12 +75,13 @@ namespace HW_07_new
         }
 
         /// <summary>
-        /// Выводит запись о сотруднике из файла по переданному Id
+        /// Удаляет запись о сотруднике из файла по переданному Id
         /// </summary>
         /// <param name="path"></param>
         /// <param name="id"></param>
         public static void Erazer(string path, string id)
         {
+            Sorter.SortedBy(path);
             if (File.Exists(path))
             {
                 var lines = File.ReadAllLines(path);
@@ -99,6 +100,33 @@ namespace HW_07_new
             else
             {
                 ConsoleMethods.FileExistError();
+            }
+        }
+
+        /// <summary>
+        /// Изменяет запись о сотруднике из файла по переданному Id
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="id"></param>
+        public static void Renamer(string path, int id)
+        {
+            if (File.Exists(path))
+            {
+                var lines = File.ReadAllLines(path);
+                List<string> ls = new List<string>();
+                foreach (var i in lines)
+                {
+                    if (Convert.ToInt32(UserInfo.NoteToArr(i)[0]) == id)
+                    {
+                        UserInfo.GetUserInfo();
+                        string noteToWrite = UserInfo.GetUserString(id, UserInfo.Fio, UserInfo.Age, UserInfo.High, UserInfo.BirthDate, UserInfo.BirthPlace);
+                        //WriteStreamToFile(path, noteToWrite);
+                        ls.Add(noteToWrite);
+                        continue;
+                    }
+                    ls.Add(i);
+                }
+                File.WriteAllLines(path, ls);
             }
         }
     }

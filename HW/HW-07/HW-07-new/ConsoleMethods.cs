@@ -57,5 +57,22 @@ namespace HW_07_new
             Console.Write("\nВведите Id сотрудникка для удаления: ");
             return Console.ReadLine();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string GetUserIdForRename()
+        {
+            Console.Write("\nВведите Id сотрудникка для изменения записи: ");
+            return Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Печатает 'Good bye!!!'
+        /// </summary>
+        public static void PrintGoodbye()
+        {
+            Console.WriteLine("\nGood Bye!!!");
+        }
     } 
 }
