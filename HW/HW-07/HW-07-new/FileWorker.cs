@@ -154,6 +154,41 @@ namespace HW_07_new
                 uiArr.Add(ui);
             }
             return uiArr;
-        } 
+        }
+
+
+        /// <summary>
+        /// Формирует список сотрудников по диапазону выбранных дат
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        public static List<UserInfo> DateDiapazon(string path)
+        {
+            List<UserInfo> uiArr = new List<UserInfo>();
+            var lines = File.ReadAllLines(path);
+
+            DateTime start = ConsoleMethods.SetStartDate();
+            DateTime end = ConsoleMethods.SetEndDate();
+
+            foreach (var i in lines)
+            {
+                UserInfo ui = new UserInfo();
+                if (Convert.ToDateTime(UserInfo.NoteToArr(i)[1]) >= start && Convert.ToDateTime(UserInfo.NoteToArr(i)[1]) <= end)
+                {
+                    ui.Id = Convert.ToInt32(UserInfo.NoteToArr(i)[0]);
+                    ui.DT = Convert.ToDateTime(UserInfo.NoteToArr(i)[1]);
+                    ui.TT = Convert.ToDateTime(UserInfo.NoteToArr(i)[2]);
+                    ui.Fio = UserInfo.NoteToArr(i)[3];
+                    ui.Age = Convert.ToInt32(UserInfo.NoteToArr(i)[4]);
+                    ui.High = Convert.ToInt32(UserInfo.NoteToArr(i)[5]);
+                    ui.BirthDate = Convert.ToDateTime(UserInfo.NoteToArr(i)[6]);
+                    ui.BirthPlace = UserInfo.NoteToArr(i)[7];
+                    uiArr.Add(ui);
+                }
+            }
+            return uiArr;
+        }
     }
 }

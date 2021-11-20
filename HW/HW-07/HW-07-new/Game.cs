@@ -24,6 +24,7 @@ namespace HW_07_new
                 Console.WriteLine("3 - Удалить сотрудника.");
                 Console.WriteLine("4 - Изменить запись.");
                 Console.WriteLine("5 - Меню сортировки списка сотрудников.");
+                Console.WriteLine("6 - Вывести список сотрудников из диапазона дат.");
                 Console.WriteLine("q - Выйти из программы.");
                 Console.Write(">> ");
                 char choice = ' ';
@@ -56,6 +57,13 @@ namespace HW_07_new
                         {
                             Console.WriteLine();
                             SortMenu(path);
+                            break;
+                        }
+                    case '6':
+                        {
+                            List<UserInfo> uiArr = FileWorker.DateDiapazon(path);
+                            ConsoleMethods.PrintHeaderNote();
+                            ConsoleMethods.PrintListToNote(uiArr);
                             break;
                         }
                     case 'q':

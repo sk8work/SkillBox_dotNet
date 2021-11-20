@@ -135,5 +135,26 @@ namespace HW_07_new
             Console.WriteLine("Список сотрудников, отсортированных по Дате создания: ");
         }
 
+        /// <summary>
+        /// Установить начальную дату
+        /// </summary>
+        /// <returns></returns>
+        public static DateTime SetStartDate()
+        {
+            Console.WriteLine("Выберите начальную дату");
+            DateTime date = Convert.ToDateTime(Console.ReadLine());
+            return date;
+        }
+
+        /// <summary>
+        /// Установить конечную дату
+        /// </summary>
+        /// <returns></returns>
+        public static DateTime SetEndDate()
+        {
+            Console.WriteLine("Выберите конечную дату");
+            DateTime date = Convert.ToDateTime(Console.ReadLine());
+            return date;
+        }
     } 
 }

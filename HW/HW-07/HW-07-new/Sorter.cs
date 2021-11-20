@@ -24,10 +24,6 @@ namespace HW_07_new
                 return us1.Id.CompareTo(us2.Id);
             });
             ConsoleMethods.PrintHeaderNote();
-            foreach (var item in userArr)
-            {
-                Console.WriteLine(item.Id);
-            }
         }
 
         /// <summary>
@@ -40,10 +36,6 @@ namespace HW_07_new
             {
                 return us1.Fio.CompareTo(us2.Fio);
             });
-            foreach (var item in userArr)
-            {
-                Console.WriteLine(item.Fio);
-            }
         }
 
         /// <summary>
@@ -56,10 +48,6 @@ namespace HW_07_new
             {
                 return us1.BirthDate.CompareTo(us2.BirthDate);
             });
-            foreach (var item in userArr)
-            {
-                Console.WriteLine(item.BirthDate);
-            }
         }
 
         /// <summary>
@@ -72,10 +60,6 @@ namespace HW_07_new
             {
                 return us1.Age.CompareTo(us2.Age);
             });
-            foreach (var item in userArr)
-            {
-                Console.WriteLine(item.Age);
-            }
         }
 
         /// <summary>
@@ -88,10 +72,6 @@ namespace HW_07_new
             {
                 return us1.High.CompareTo(us2.High);
             });
-            foreach (var item in userArr)
-            {
-                Console.WriteLine(item.High);
-            }
         }
 
         /// <summary>
@@ -104,10 +84,6 @@ namespace HW_07_new
             {
                 return us1.DT.CompareTo(us2.DT);
             });
-            foreach (var item in userArr)
-            {
-                Console.WriteLine(item.DT);
-            }
         }
     }
 }
