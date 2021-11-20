@@ -6,25 +6,39 @@ using System.Threading.Tasks;
 
 namespace HW_07_new
 {
+    /// <summary>
+    /// Структура для описания полей пользователя
+    /// </summary>
     struct UserInfo
     {
-        // incapsulated fields
+        /// <summary>
+        /// Статичное поле для уникального Id пользователя
+        /// </summary>
         public static int id = 0;
-        static string fio;
-        static int age;
-        static int high;
-        static DateTime birthDate;
-        static string birthPlace;
-        static string userChoice;
+
+        public UserInfo(string fio, DateTime date, DateTime time, int age, int high, DateTime birthDate, string birthPlace, string userChoice)
+        {
+            Id = id;
+            DT = date;
+            TT = time;
+            Fio = fio;
+            Age = age;
+            High = high;
+            BirthDate = birthDate;
+            BirthPlace = birthPlace;
+            UserChoice = userChoice;
+        }
 
         //public methods
-        //public static int Id { get => id; set => id = value; }
-        public static string Fio { get => fio; set => fio = value; }
-        public static int Age { get => age; set => age = value; }
-        public static int High { get => high; set => high = value; }
-        public static DateTime BirthDate { get => birthDate; set => birthDate = value; }
-        public static string BirthPlace { get => birthPlace; set => birthPlace = value; }
-        public static string UserChoice { get => userChoice; set => userChoice = value; }
+        public int Id { get; set; }
+        public DateTime DT { get; set; }
+        public DateTime TT { get; set; }
+        public string Fio { get; set; }
+        public int Age { get; set; }
+        public int High { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string BirthPlace { get; set; }
+        public string UserChoice { get; set; }
 
         /// <summary>
         /// Формируем строку с данными от пользователя
@@ -36,7 +50,7 @@ namespace HW_07_new
         /// <param name="birthDate"></param>
         /// <param name="birthPlace"></param>
         /// <returns></returns>
-        public static void GetUserInfo()
+        public void SetUserInfo()
         {
             Console.Write("\nВведите Ф.И.О.: ");
             Fio = Console.ReadLine();
@@ -68,7 +82,7 @@ namespace HW_07_new
         {
             string note = string.Empty;
 
-            note += $"{id}#{DateTime.Now.ToShortDateString()}/{ DateTime.Now.ToShortTimeString()}#{fio}#{age}#{high}#{birthDate}#{birthPlace}";
+            note += $"{id}#{DateTime.Now.ToShortDateString()}#{ DateTime.Now.ToShortTimeString()}#{fio}#{age}#{high}#{birthDate.ToShortDateString()}#{birthPlace}";
             return note;
         }
 
@@ -81,7 +95,5 @@ namespace HW_07_new
             string[] data = note.Split('#');
             return data;
         }
-
-
     }
 }

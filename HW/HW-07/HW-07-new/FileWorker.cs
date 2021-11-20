@@ -9,7 +9,6 @@ namespace HW_07_new
 {
     struct FileWorker
     {
-
         /// <summary>
         /// Читает из файла построчно. UserInfo.Id++
         /// </summary>
@@ -30,8 +29,9 @@ namespace HW_07_new
                 }
             }
 
-            UserInfo.GetUserInfo();
-            string noteToWrite = UserInfo.GetUserString(UserInfo.id, UserInfo.Fio, UserInfo.Age, UserInfo.High, UserInfo.BirthDate, UserInfo.BirthPlace);
+            UserInfo ui = new UserInfo();
+            ui.SetUserInfo();
+            string noteToWrite = UserInfo.GetUserString(UserInfo.id, ui.Fio, ui.Age, ui.High, ui.BirthDate, ui.BirthPlace);
             WriteStreamToFile(path, noteToWrite);
         }
 
@@ -81,7 +81,6 @@ namespace HW_07_new
         /// <param name="id"></param>
         public static void Erazer(string path, string id)
         {
-            Sorter.SortedBy(path);
             if (File.Exists(path))
             {
                 var lines = File.ReadAllLines(path);
@@ -94,7 +93,6 @@ namespace HW_07_new
                     }
                     ls.Add(i);
                 }
-
                 File.WriteAllLines(path, ls);
             }
             else
@@ -118,9 +116,9 @@ namespace HW_07_new
                 {
                     if (Convert.ToInt32(UserInfo.NoteToArr(i)[0]) == id)
                     {
-                        UserInfo.GetUserInfo();
-                        string noteToWrite = UserInfo.GetUserString(id, UserInfo.Fio, UserInfo.Age, UserInfo.High, UserInfo.BirthDate, UserInfo.BirthPlace);
-                        //WriteStreamToFile(path, noteToWrite);
+                        UserInfo ui = new UserInfo();
+                        ui.SetUserInfo();
+                        string noteToWrite = UserInfo.GetUserString(id, ui.Fio, ui.Age, ui.High, ui.BirthDate, ui.BirthPlace);
                         ls.Add(noteToWrite);
                         continue;
                     }
@@ -129,5 +127,33 @@ namespace HW_07_new
                 File.WriteAllLines(path, ls);
             }
         }
+
+        /// <summary>
+        /// Формирует массив сотрудников (для дальнейшей сортировки)
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static List<UserInfo> UsersToArr(string path)
+        {
+            List<UserInfo> uiArr = new List<UserInfo>();
+            var lines = File.ReadAllLines(path);
+
+            foreach (var i in lines)
+            {
+                UserInfo ui = new UserInfo();
+
+                ui.Id = Convert.ToInt32(UserInfo.NoteToArr(i)[0]);
+                ui.DT = Convert.ToDateTime(UserInfo.NoteToArr(i)[1]);
+                ui.TT = Convert.ToDateTime(UserInfo.NoteToArr(i)[2]);
+                ui.Fio = UserInfo.NoteToArr(i)[3];
+                ui.Age = Convert.ToInt32(UserInfo.NoteToArr(i)[4]);
+                ui.High = Convert.ToInt32(UserInfo.NoteToArr(i)[5]);
+                ui.BirthDate = Convert.ToDateTime(UserInfo.NoteToArr(i)[6]);
+                ui.BirthPlace = UserInfo.NoteToArr(i)[7];
+
+                uiArr.Add(ui);
+            }
+            return uiArr;
+        } 
     }
 }

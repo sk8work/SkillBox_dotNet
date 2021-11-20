@@ -17,13 +17,14 @@ namespace HW_07_new
             var game = true;
             while (game)
             {
-                Console.WriteLine("Программа учета сотрудников компании");
+                Console.WriteLine("Программа учета сотрудников компании.");
                 Console.WriteLine("Меню программы: ");
                 Console.WriteLine("1 - Добавить сотрудника.");
                 Console.WriteLine("2 - Вывести список сотрудников.");
                 Console.WriteLine("3 - Удалить сотрудника.");
                 Console.WriteLine("4 - Изменить запись.");
-                Console.WriteLine("q - Выйти из программы");
+                Console.WriteLine("5 - Меню сортировки списка сотрудников.");
+                Console.WriteLine("q - Выйти из программы.");
                 Console.Write(">> ");
                 char choice = ' ';
                 choice = Console.ReadKey().KeyChar;
@@ -51,6 +52,12 @@ namespace HW_07_new
                             FileWorker.Renamer(path, id);
                             break;
                         }
+                    case '5':
+                        {
+                            Console.WriteLine();
+                            SortMenu(path);
+                            break;
+                        }
                     case 'q':
                         {
                             game = false;
@@ -59,6 +66,80 @@ namespace HW_07_new
                 }
             }
             ConsoleMethods.PrintGoodbye();
+        }
+
+        /// <summary>
+        /// вывод меню сортировки
+        /// </summary>
+        /// <param name="path"></param>
+        public static void SortMenu(string path)
+        {
+            var sort = true;
+            while (sort)
+            {
+                Console.WriteLine(">> Меню сортировки.");
+                Console.WriteLine(">> 1 - Сортировка по Id.");
+                Console.WriteLine(">> 2 - Сортировка по имени.");
+                Console.WriteLine(">> 3 - Сортировка по дате рождения.");
+                Console.WriteLine(">> 4 - Сортировка по возрасту.");
+                Console.WriteLine(">> 5 - Сортировка по росту.");
+                Console.WriteLine(">> 6 - Сортировка по дате создания.");
+                Console.WriteLine("q - Выйти в главное меню.");
+                Console.Write(">>>> ");
+                char choice = ' ';
+                choice = Console.ReadKey().KeyChar;
+                List<UserInfo> uiArr = FileWorker.UsersToArr(path);
+                switch (choice)
+                {
+                    case '1':
+                        {
+                            Sorter.SortById(uiArr);
+                            ConsoleMethods.PrintHeaderNote();
+                            ConsoleMethods.PrintListToNote(uiArr);
+                            break;
+                        }
+                    case '2':
+                        {
+                            Sorter.SortByName(uiArr);
+                            ConsoleMethods.PrintHeaderNote();
+                            ConsoleMethods.PrintListToNote(uiArr);
+                            break;
+                        }
+                    case '3':
+                        {
+                            Sorter.SortByBDate(uiArr);
+                            ConsoleMethods.PrintHeaderNote();
+                            ConsoleMethods.PrintListToNote(uiArr);
+                            break;
+                        }
+                    case '4':
+                        {
+                            Sorter.SortByAge(uiArr);
+                            ConsoleMethods.PrintHeaderNote();
+                            ConsoleMethods.PrintListToNote(uiArr);
+                            break;
+                        }
+                    case '5':
+                        {
+                            Sorter.SortByHigh(uiArr);
+                            ConsoleMethods.PrintHeaderNote();
+                            ConsoleMethods.PrintListToNote(uiArr);
+                            break;
+                        }
+                    case '6':
+                        {
+                            Sorter.SortByDateCreation(uiArr);
+                            ConsoleMethods.PrintHeaderNote();
+                            ConsoleMethods.PrintListToNote(uiArr);
+                            break;
+                        }
+                    case 'q':
+                        {
+                            sort = false;
+                            break;
+                        }
+                }
+            }
         }
     }
 }
